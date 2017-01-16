@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title> Project  ONE  </title>
+            <link rel="stylesheet" href="style.css">
+                </head>
+    <header>
+        <p id="welcome"> Location </p>
+    </header>
+    <body>
+        <main class="location">
+            <center>
+                <article>
+                    <p id="check"> </p>
+                    <p id="alert"> </p>
+                    <p> Latitude: <span id="latitude"> </span> </p>
+                    <p> Lonitude: <span id="longitude"> </span> </p> <br>
+                    <p> Map </p>
+                    <div id="map"> </div>
+                </article>
+                <script>
+                    if (navigator.geolocation)
+                    {
+                        document.getElementById("check").innerHTML = "Location Information Available";
+                        document.getElementById("alert").innerHTML = ("This Process May Take Few Seconds");
+                        navigator.geolocation.getCurrentPosition
+                        (
+                        
+                            function (position)
+                            {
+                                var lati = position.coords.latitude;
+                                var longi = position.coords.longitude;
+                                var alt = position.coords.altitude;
+                                var coordAccu = position.coords.accuracy;
+                                var altAccu = position.coords.altitudeAccuracy;
+                                var direction = position.coords.heading;
+                                var speed = position.coords.speed;
+                                document.getElementById("latitude").innerHTML = lati;
+                                document.getElementById("longitude").innerHTML = longi;
+                         
+                    
+                                var apiKey = "AIzaSyBSw3xLrnihLlpz6_ccjmsfIgftUy6igb0";
+                                var mapLink = "https://maps.googleapis.com/maps/api/js?key=" + apiKey;
+                         
+                                var currentLocation = {lat: lati, lng: longi};
+                                var map = new google.maps.Map(document.getElementById("map"),
+                                {
+                                    zoom: 15,
+                                    center: currentLocation,
+                                });
+                         
+                                var marker = new google.maps.Marker(
+                                {
+                                    position: currentLocation ,
+                                    map: map,
+                                });
+                            }
+                        );
+                    }
+                    else
+                    {
+                        document.getElementById("check").innerHTML = "Location Information Not Available On Your Device";
+                    }
+                
+            </script>
+            </center>
+        </main>
+        <aside>
+            <center>
+                <a id="return" class="button2" href="file:///Users/tsugumi/Desktop/HTML%20test/Test2.html"> Back to option</a>
+                <a id="return" class="button2" href="file:///Users/tsugumi/Desktop/HTML%20test/test.html"> Back to home</a>
+            </center>
+        </aside>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSw3xLrnihLlpz6_ccjmsfIgftUy6igb0">
+        </script>
+    </body>
+</html>

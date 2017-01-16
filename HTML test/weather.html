@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title> Project  ONE  </title>
+            <link rel="stylesheet" href="style.css">
+            </head>
+    <header>
+        <p id="welcome"> Weather </p>
+    </header>
+    <body>
+        <main class="weather">
+        <center>
+            <p> City: <span id="location"> </span> </p>
+            <p> Weather: <span id="weather"> </span> </p>
+            <img src="aaa.png" height="120px" width="120px" id="icon">
+            <p> Temperature: <span id="temperature"> </span> ℃ </p>
+        <script>
+        
+            var request = new XMLHttpRequest();
+            var apiKey = "223d4d771c98a65cf3168996a7ce9a53";
+            var city = "waterloo";
+            var countryCode = "canada";
+            var link = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + countryCode + "&APPID=" + apiKey + "&mode=xml" + "&units=metric";
+            
+           // header('Content-Type: text/xml');
+            
+            request.open("GET", link, false);
+            request.send();
+            
+            weatherData = request.responseXML;
+            
+            //test to see if the conection is working
+            /*
+            document.write(request.status + " ");
+            document.write(request.statusText);
+            */
+        
+        //location
+        var city = weatherData.getElementsByTagName("city")[0];
+        var cityname = city.getAttributeNode("name");
+        var cityName = cityname.nodeValue;
+        document.getElementById("location").innerHTML = cityName;
+        
+        
+        //weather
+        var weather = weatherData.getElementsByTagName("weather")[0];
+        var value = weather.getAttributeNode("value");
+        var weatherValue = value.nodeValue;
+        document.getElementById("weather").innerHTML = weatherValue;
+        
+        
+         //icon
+         var weather = weatherData.getElementsByTagName("weather")[0];
+         var iconMark = weather.getAttributeNode("icon");
+         var weatherIcon = iconMark.nodeValue;
+         var iconURL = "http://openweathermap.org/img/w/" + weatherIcon + ".png";
+         document.getElementById("icon").src = "http://openweathermap.org/img/w/" + weatherIcon + ".png";
+
+        //temperature
+        var temperature = weatherData.getElementsByTagName("temperature")[0];
+        var valueTemp = temperature.getAttributeNode("value");
+        var tempCity = valueTemp.nodeValue;
+        document.getElementById("temperature").innerHTML = tempCity;
+        
+        
+        </script>
+        </center>
+        </main>
+        <aside>
+            <center>
+                <a id="return" class="button2" href="file:///Users/tsugumi/Desktop/HTML%20test/Test2.html"> Back to option</a>
+                <a id="return" class="button2" href="file:///Users/tsugumi/Desktop/HTML%20test/test.html"> Back to home</a>
+            </center>
+        </aside>
+    </body>
+</html>

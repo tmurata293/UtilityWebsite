@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title> Project  ONE  </title>
+            <link rel="stylesheet" href="style.css">
+                </head>
+    <header>
+        <p id="welcome"> Date and Time </p>
+    </header>
+    <body>
+        <main class="date">
+            <center>
+                <script>
+                    var calender = new Date();
+                    var year = calender.getFullYear();
+                    var month = calender.getMonth() +1;
+                    var dayArr = new Array ("Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat");
+                    var day = calender.getDay();
+                    var date = calender.getDate();
+                    document.write(year + " . " + month + " . " + date + " (" + dayArr[day] + ") ");
+                </script>
+                <br>
+                <p id="autotime">   </p>
+                <script>
+                    function autoplay(){
+                    var time = new Date();
+                    var hour = time.getHours();
+                    var min = time.getMinutes();
+                    var sec = time.getSeconds();
+                    
+                    if(hour < 10 )
+                    {
+                        hour = "0" + hour;
+                    }
+                    if(min < 10 )
+                    {
+                        min = "0" + min;
+                    }
+                    if(sec < 10 )
+                    {
+                        sec = "0" + sec;
+                    }
+                    
+                    document.getElementById("autotime").innerHTML = ( hour + " : " + min + " : " + sec);
+                    }
+                   
+                    setInterval ("autoplay()", 1000);
+                </script>
+            </center>
+        </main>
+        <aside>
+            <center>
+            <a id="return" class="button2" href="file:///Users/tsugumi/Desktop/HTML%20test/Test2.html"> Back to option</a>
+            <a id="return" class="button2" href="file:///Users/tsugumi/Desktop/HTML%20test/test.html"> Back to home</a>
+            </center>
+        </aside>
+    </body>
+</html>

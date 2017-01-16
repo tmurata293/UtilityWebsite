@@ -1,0 +1,233 @@
+/*
+ 
+ first page link: http://htmlprojectone.web.fc2.com/
+ second page link: http://htmlprojectone.web.fc2.com/Test2.html
+*/
+
+header{
+}
+
+main {
+}
+
+footer {
+}
+
+p{
+    font-family: 'Batang'; 
+}
+span#name {
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+
+
+#button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    border: 2px solid rgb(90,175,250); 
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    outline: none;
+    color: white;
+    background-color: rgb(90,175,250);
+}
+
+.button3 {
+    display: block;
+    width: 200px;
+    height: 50px;
+    border: 2px solid rgb(90,175,250);
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    outline: none;
+    background-color: rgb(220,220,220);
+    border-color: rgb(90,175,250);
+    color: rgb(90,175,250);
+}
+
+/*
+#button3 {
+    display: block;
+    width: 200px;
+    height: 50px;
+    border: 2px solid rgb(90,175,250);
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    outline: none;
+    color: white;
+    background-color: rgb(90,175,250);
+}
+*/
+
+#button:hover {
+    background-color: white;
+    border-color: rgb(90,175,250);
+    color: rgb(90,175,250);
+}
+
+/*
+.image{
+    visibility: hidden;
+}
+ */
+
+/*
+#button3:hover > .image {
+    visibility: visible;
+}
+*/
+
+#return{
+    display: block;
+    width: 200px;
+    height: 50px;
+    border: 2px solid rgb(0,255,160);
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    outline: none;
+    color: white;
+    background-color: rgb(0,255,160);
+}
+
+#return:hover {
+    background-color: white;
+    border-color: rgb(0,255,160);
+    color: rgb(0,255,160);
+}
+
+.button1{
+    margin-top: 120px;
+    margin-bottom: 180px;
+}
+
+.button2{
+    margin-top: 50px;
+}
+
+
+
+span#one {
+    font-style: italic;
+    text-transform: capitalize;
+    color: red;
+}
+
+p#welcome{
+    text-align: center;
+    font-weight: normal;
+    font-size: 3em;
+    color: rgb(100,100,100);
+}
+
+#button+div#div1{
+    display: block;
+    position: relative;
+
+}
+
+#button:hover+div#div1{
+    display: block;
+
+}
+
+.button3:hover{
+    background-color: white;
+}
+
+/*
+#button+div#div2{
+    position: absolute;
+    visibility: hidden;
+    left: 350px;
+    
+}
+
+#button:hover+div#div2{
+    visibility: visible;
+}
+
+*/
+
+.message, .image{
+    margin-top: 10px; 
+    width: 200px;
+    font-family:  'Batang';
+    color: rgb(90,175,250);
+    background-color: rgb(220,220,220);
+}
+
+#message{
+    height: 30px;
+}
+
+#image{
+    margin-left: 15px;
+    
+     
+}
+
+#submit{
+    font-family:  'Batang';
+    background-color: rgb(90,175,250);
+    color: white;
+}
+
+.date{
+    font-family: 'Batang';
+    margin-top: 100px;
+    font-size: 5em;
+    color: rgb(90,175,250);
+}
+
+.weather{
+    font-family: 'Batang';
+    margin-top: 80px;
+    font-size: 3em;
+    color: rgb(150,150,150);
+}
+
+.location{
+    font-family: 'Batang';
+    margin-top: 50px;
+    font-size: 2em;
+    color: rgb(150,150,150);
+}
+
+#location, #weather, #temperature , #latitude , #longitude{
+    font-family: 'Batang';
+    margin-top: 80px;
+    font-size: 1em;
+    color: rgb(90,175,250); 
+}
+
+#check{
+    font-family: 'Batang';
+    margin-top: 5px;
+    font-size: 0.5em;
+    color: rgb(150,150,150);
+}
+
+#alert{
+    font-family: 'Batang';
+    margin-top: 5px;
+    font-size: 0.4em;
+    color: rgb(90,175,250);
+
+}
+
+#map{
+    height: 800px;
+    width: 800px;
+}
+
+
+
+
